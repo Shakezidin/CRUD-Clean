@@ -1,8 +1,6 @@
 package main
 
-import (
-	"github.com/shakezidin/di"
-)
+import "github.com/shakezidin/internal/di"
 
 func main() {
 	server := di.Init()
