@@ -16,10 +16,6 @@ type UserInteraction struct {
 	UserRepository repository.UserRepository
 }
 
-func (u *UserInteraction) SetUserRepository(userRepository repository.UserRepository) {
-	u.UserRepository = userRepository
-}
-
 func (u *UserInteraction) RegisterUser(user *user.UserRegister) error {
 	if len(user.Phone) < 10 {
 		return errors.New("username must be at least 3 characters long")

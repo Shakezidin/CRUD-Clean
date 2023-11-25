@@ -15,10 +15,6 @@ type UserUserCase interface {
 	LoginUserHandler(c *gin.Context)
 }
 
-func (u UserHandler) SetUserUseCase(userUseCase usecase.UserUseCase) {
-	u.userUseCase = userUseCase
-}
-
 func (u *UserHandler) RegisterUserHandler(c *gin.Context) {
 	var user user.UserRegister
 	if err := c.BindJSON(&user); err != nil {
